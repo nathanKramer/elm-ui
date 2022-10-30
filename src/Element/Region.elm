@@ -1,5 +1,5 @@
 module Element.Region exposing
-    ( mainContent, navigation, heading, aside, footer
+    ( article, mainContent, navigation, heading, aside, footer
     , description
     , announce, announceUrgently
     )
@@ -19,7 +19,7 @@ Here's an example of annotating your navigation region:
             [-- ..your navigation links
             ]
 
-@docs mainContent, navigation, heading, aside, footer
+@docs article, mainContent, navigation, heading, aside, footer
 
 @docs description
 
@@ -36,6 +36,10 @@ mainContent : Attribute msg
 mainContent =
     Internal.Describe Main
 
+{-| -}
+article : Attribute msg
+article =
+    Internal.Describe Article
 
 {-| -}
 aside : Attribute msg
