@@ -336,6 +336,7 @@ type Description
     | LiveAssertive
     | Button
     | Paragraph
+    | Article
 
 
 type Length
@@ -1119,6 +1120,9 @@ gatherAttrRecursive classes node has transform styles attrs children elementAttr
 
                 Describe description ->
                     case description of
+                        Article -> 
+                            gatherAttrRecursive classes (addNodeName "article" node) has transform styles attrs children remaining
+
                         Main ->
                             gatherAttrRecursive classes (addNodeName "main" node) has transform styles attrs children remaining
 
